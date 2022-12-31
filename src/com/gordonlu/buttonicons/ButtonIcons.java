@@ -38,7 +38,7 @@ import android.util.DisplayMetrics;
 "5AWbUFyiIICopLQmRfChQiiSZGb3/PmdIWY/SCJl/mzPJ/M51xOOhTFAXL4DDDcmWMWu8dtf5vKo0ZpMIAwXxfELhievCpHfj9fgjBc/cN2usnhn+QuBsjdK0hRCKWnWS6cCktW1Cuz4zFM4OR4EvUbf0DHtpt96IJZ6wBZ7SOzUgdG" + 
 "+EXWxAtaVCrOrJPU+SY56nYNZAfwJVoY/eyRYIWdkiyHW9iS4gatiB+O8JFmRnjkggWNBxS8DDREe2BYrAvt7Ent4SQZZaAQ3yRMu0avRnCneriaAHuu5MduJK2cF9euAOFgol7nVod3kwPnrSBN23Xx4w6FwrRwiskqxOkHiaQrofwZ" + 
 "fs4YXIDG+rzuDfTN2RqT4gsgfo4FZLTqwHOiPO89gsePzVlc5ElCJdGkIpD+OnyAnSKoEnRaHksUKB5FhEs4hNZAjMoFUcIlQzCN2ML7ksEC3mdeSJLwP9jhiK39BJlHTGmooua4XGeFyKS8ItYgpX1IlZdVawx7n+g+VXBvcj8ECyDEPDHxTJw9htjXTNbFi6OggAAAABJRU5ErkJggg==")
-@UsesAssets(fileNames = "material-icons.ttf,font-awesome.ttf")
+@UsesAssets(fileNames = "material-icons.ttf")
 @SimpleObject(external = true)
 
 public class ButtonIcons extends AndroidNonvisibleComponent {
@@ -88,23 +88,6 @@ public class ButtonIcons extends AndroidNonvisibleComponent {
         }
     }
 
-    public Drawable createFontAwesomeIcon(String icon, int color, int size) {
-        if (icon == "") {
-            return null; 
-        } else {
-            Typeface typeface = Typeface.createFromAsset(form.getAssets(), "com.gordonlu.buttonicons/" + "font-awesome.ttf");
-            Paint paint = new Paint();
-            paint.setTypeface(typeface);
-            paint.setColor(color);
-            paint.setTextSize((float)size);
-            paint.setTextAlign(Paint.Align.CENTER);
-            Bitmap bit = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(bit);
-            canvas.drawText(icon, (float) (canvas.getWidth() / 2),   (((float) (canvas.getHeight() / 2)) - ((paint.descent() + paint.ascent()) / 2)), paint);
-            return new BitmapDrawable(form.getResources(), bit);
-        }
-    }
-
     @SimpleFunction(description = "Sets the material icon of the specified button. Use an empty text block if you do not want an icon to appear. The size of the icons should be in pixels.")
     public void SetMaterialButtonIcons(AndroidViewComponent component, String leftIcon, String topIcon, String rightIcon, String bottomIcon, int color, int size) {
         Button button = (Button) component.getView();
@@ -113,13 +96,10 @@ public class ButtonIcons extends AndroidNonvisibleComponent {
         createMaterialIcon(rightIcon, color, pixels), createMaterialIcon(bottomIcon, color, pixels));
     }
 
-    @Deprecated
-    @SimpleFunction(description = "Sets the Font Awesome icon of the specified button. Use an empty text block if you do not want an icon to appear. The size of the icons should be in pixels.")
-    public void SetFontAwesomeButtonIcons(AndroidViewComponent component, String leftIcon, String topIcon, String rightIcon, String bottomIcon, int color, int size) {
+    @SimpleFunction(description = "Sets the size of the padding between the icon and the text.")
+    public void SetIconPadding(AndroidViewComponent component, int padding) {
         Button button = (Button) component.getView();
-        int pixels = size * getDensity();
-        button.setCompoundDrawablesWithIntrinsicBounds(createFontAwesomeIcon(leftIcon, color, pixels), createFontAwesomeIcon(topIcon, color, pixels), 
-        createFontAwesomeIcon(rightIcon, color, pixels), createFontAwesomeIcon(bottomIcon, color, pixels));
+        button.setCompoundDrawablePadding(padding);
     }
 
     public int getDensity(){

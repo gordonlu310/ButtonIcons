@@ -1,0 +1,1804 @@
+{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2022-12-31T14:05:34+0800",
+ "nonVisible": "true",
+ "iconName": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVR42p2R2U7CQBSGeWnfQB/BKO6CAi5AWbUFyiIICopLQmRfChQiiSZGb3/PmdIWY/SCJl/mzPJ/M51xOOhTFAXL4DDDcmWMWu8dtf5vKo0ZpMIAwXxfELhievCpHfj9fgjBc/cN2usnhn+QuBsjdK0hRCKWnWS6cCktW1Cuz4zFM4OR4EvUbf0DHtpt96IJZ6wBZ7SOzUgdG+EXWxAtaVCrOrJPU+SY56nYNZAfwJVoY/eyRYIWdkiyHW9iS4gatiB+O8JFmRnjkggWNBxS8DDREe2BYrAvt7Ent4SQZZaAQ3yRMu0avRnCneriaAHuu5MduJK2cF9euAOFgol7nVod3kwPnrSBN23Xx4w6FwrRwiskqxOkHiaQrofwZfs4YXIDG+rzuDfTN2RqT4gsgfo4FZLTqwHOiPO89gsePzVlc5ElCJdGkIpD+OnyAnSKoEnRaHksUKB5FhEs4hNZAjMoFUcIlQzCN2ML7ksEC3mdeSJLwP9jhiK39BJlHTGmooua4XGeFyKS8ItYgpX1IlZdVawx7n+g+VXBvcj8ECyDEPDHxTJw9htjXTNbFi6OggAAAABJRU5ErkJggg==",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "SetButtonIcons",
+   "description": "Sets the icon of the specified button. Use 0 if you do not want an icon to appear.",
+   "params": [
+    {
+     "name": "component",
+     "type": "component"
+    },
+    {
+     "helper": {
+      "data": {
+       "defaultOpt": "Add",
+       "underlyingType": "java.lang.Integer",
+       "options": [
+        {
+         "deprecated": "false",
+         "name": "Add",
+         "description": "Option for Add",
+         "value": "17301547"
+        },
+        {
+         "deprecated": "false",
+         "name": "AddToMenu",
+         "description": "Option for AddToMenu",
+         "value": "17301555"
+        },
+        {
+         "deprecated": "false",
+         "name": "Agenda",
+         "description": "Option for Agenda",
+         "value": "17301556"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alarm",
+         "description": "Option for Alarm",
+         "value": "17301550"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alert",
+         "description": "Option for Alert",
+         "value": "17301543"
+        },
+        {
+         "deprecated": "false",
+         "name": "Call",
+         "description": "Option for Call",
+         "value": "17301558"
+        },
+        {
+         "deprecated": "false",
+         "name": "Camera",
+         "description": "Option for Camera",
+         "value": "17301559"
+        },
+        {
+         "deprecated": "false",
+         "name": "Charging",
+         "description": "Option for Charging",
+         "value": "17301534"
+        },
+        {
+         "deprecated": "false",
+         "name": "ClearNotifications",
+         "description": "Option for ClearNotifications",
+         "value": "17301594"
+        },
+        {
+         "deprecated": "false",
+         "name": "CloseClearCancel",
+         "description": "Option for CloseClearCancel",
+         "value": "17301560"
+        },
+        {
+         "deprecated": "false",
+         "name": "Compass",
+         "description": "Option for Compass",
+         "value": "17301561"
+        },
+        {
+         "deprecated": "false",
+         "name": "Crop",
+         "description": "Option for Crop",
+         "value": "17301562"
+        },
+        {
+         "deprecated": "false",
+         "name": "Day",
+         "description": "Option for Day",
+         "value": "17301563"
+        },
+        {
+         "deprecated": "false",
+         "name": "Delete",
+         "description": "Option for Delete",
+         "value": "17301533"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteInput",
+         "description": "Option for DeleteInput",
+         "value": "17301548"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteMenu",
+         "description": "Option for DeleteMenu",
+         "value": "17301564"
+        },
+        {
+         "deprecated": "false",
+         "name": "Dialer",
+         "description": "Option for Dialer",
+         "value": "17301544"
+        },
+        {
+         "deprecated": "false",
+         "name": "Directions",
+         "description": "Option for Directions",
+         "value": "17301565"
+        },
+        {
+         "deprecated": "false",
+         "name": "DiskFull",
+         "description": "Option for DiskFull",
+         "value": "17301597"
+        },
+        {
+         "deprecated": "false",
+         "name": "Edit",
+         "description": "Option for Edit",
+         "value": "17301566"
+        },
+        {
+         "deprecated": "false",
+         "name": "Email",
+         "description": "Option for Email",
+         "value": "17301545"
+        },
+        {
+         "deprecated": "false",
+         "name": "GetInput",
+         "description": "Option for GetInput",
+         "value": "17301549"
+        },
+        {
+         "deprecated": "false",
+         "name": "Help",
+         "description": "Option for Help",
+         "value": "17301568"
+        },
+        {
+         "deprecated": "false",
+         "name": "IdleLock",
+         "description": "Option for IdleLock",
+         "value": "17301535"
+        },
+        {
+         "deprecated": "false",
+         "name": "Info",
+         "description": "Option for Info",
+         "value": "17301659"
+        },
+        {
+         "deprecated": "false",
+         "name": "InfoDetails",
+         "description": "Option for InfoDetails",
+         "value": "17301569"
+        },
+        {
+         "deprecated": "false",
+         "name": "Lock",
+         "description": "Option for Lock",
+         "value": "17301551"
+        },
+        {
+         "deprecated": "false",
+         "name": "LowBattery",
+         "description": "Option for LowBattery",
+         "value": "17301536"
+        },
+        {
+         "deprecated": "false",
+         "name": "Manage",
+         "description": "Option for Manage",
+         "value": "17301570"
+        },
+        {
+         "deprecated": "false",
+         "name": "Map",
+         "description": "Option for Map",
+         "value": "17301546"
+        },
+        {
+         "deprecated": "false",
+         "name": "Month",
+         "description": "Option for Month",
+         "value": "17301572"
+        },
+        {
+         "deprecated": "false",
+         "name": "More",
+         "description": "Option for More",
+         "value": "17301573"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyCalendar",
+         "description": "Option for MyCalendar",
+         "value": "17301574"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyLocation",
+         "description": "Option for MyLocation",
+         "value": "17301575"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyPlaces",
+         "description": "Option for MyPlaces",
+         "value": "17301576"
+        },
+        {
+         "deprecated": "false",
+         "name": "Next",
+         "description": "Option for Next",
+         "value": "17301538"
+        },
+        {
+         "deprecated": "false",
+         "name": "OverlayNotifications",
+         "description": "Option for OverlayNotifications",
+         "value": "17301595"
+        },
+        {
+         "deprecated": "false",
+         "name": "PartialSecure",
+         "description": "Option for PartialSecure",
+         "value": "17301596"
+        },
+        {
+         "deprecated": "false",
+         "name": "Pause",
+         "description": "Option for Pause",
+         "value": "17301539"
+        },
+        {
+         "deprecated": "false",
+         "name": "Play",
+         "description": "Option for Play",
+         "value": "17301540"
+        },
+        {
+         "deprecated": "false",
+         "name": "PowerOff",
+         "description": "Option for PowerOff",
+         "value": "17301552"
+        },
+        {
+         "deprecated": "false",
+         "name": "Preferences",
+         "description": "Option for Preferences",
+         "value": "17301577"
+        },
+        {
+         "deprecated": "false",
+         "name": "Previous",
+         "description": "Option for Previous",
+         "value": "17301541"
+        },
+        {
+         "deprecated": "false",
+         "name": "RecentHistory",
+         "description": "Option for RecentHistory",
+         "value": "17301578"
+        },
+        {
+         "deprecated": "false",
+         "name": "Reminder",
+         "description": "Option for Reminder",
+         "value": "17301598"
+        },
+        {
+         "deprecated": "false",
+         "name": "ReportImage",
+         "description": "Option for ReportImage",
+         "value": "17301579"
+        },
+        {
+         "deprecated": "false",
+         "name": "Revert",
+         "description": "Option for Revert",
+         "value": "17301580"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rew",
+         "description": "Option for Rew",
+         "value": "17301542"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rotate",
+         "description": "Option for Rotate",
+         "value": "17301581"
+        },
+        {
+         "deprecated": "false",
+         "name": "Save",
+         "description": "Option for Save",
+         "value": "17301582"
+        },
+        {
+         "deprecated": "false",
+         "name": "Search",
+         "description": "Option for Search",
+         "value": "17301583"
+        },
+        {
+         "deprecated": "false",
+         "name": "SearchCategoryDefault",
+         "description": "Option for SearchCategoryDefault",
+         "value": "17301600"
+        },
+        {
+         "deprecated": "false",
+         "name": "Send",
+         "description": "Option for Send",
+         "value": "17301584"
+        },
+        {
+         "deprecated": "false",
+         "name": "SetAs",
+         "description": "Option for SetAs",
+         "value": "17301585"
+        },
+        {
+         "deprecated": "false",
+         "name": "Share",
+         "description": "Option for Share",
+         "value": "17301587"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentMode",
+         "description": "Option for SilentMode",
+         "value": "17301553"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentModeOff",
+         "description": "Option for SilentModeOff",
+         "value": "17301554"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortAlphabetically",
+         "description": "Option for SortAlphabetically",
+         "value": "17301660"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortBySize",
+         "description": "Option for SortBySize",
+         "value": "17301661"
+        },
+        {
+         "deprecated": "false",
+         "name": "SpeakNow",
+         "description": "Option for SpeakNow",
+         "value": "17301668"
+        },
+        {
+         "deprecated": "false",
+         "name": "Sync",
+         "description": "Option for Sync",
+         "value": "17301599"
+        },
+        {
+         "deprecated": "false",
+         "name": "Today",
+         "description": "Option for Today",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "Upload",
+         "description": "Option for Upload",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "UploadYouTube",
+         "description": "Option for UploadYouTube",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "View",
+         "description": "Option for View",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "Week",
+         "description": "Option for Week",
+         "value": "17301592"
+        },
+        {
+         "deprecated": "false",
+         "name": "Zoom",
+         "description": "Option for Zoom",
+         "value": "17301593"
+        }
+       ],
+       "className": "com.gordonlu.buttonicons.helpers.Icon",
+       "tag": "Icon",
+       "key": "Icon"
+      },
+      "type": "OPTION_LIST"
+     },
+     "name": "leftIcon",
+     "type": "number"
+    },
+    {
+     "helper": {
+      "data": {
+       "defaultOpt": "Add",
+       "underlyingType": "java.lang.Integer",
+       "options": [
+        {
+         "deprecated": "false",
+         "name": "Add",
+         "description": "Option for Add",
+         "value": "17301547"
+        },
+        {
+         "deprecated": "false",
+         "name": "AddToMenu",
+         "description": "Option for AddToMenu",
+         "value": "17301555"
+        },
+        {
+         "deprecated": "false",
+         "name": "Agenda",
+         "description": "Option for Agenda",
+         "value": "17301556"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alarm",
+         "description": "Option for Alarm",
+         "value": "17301550"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alert",
+         "description": "Option for Alert",
+         "value": "17301543"
+        },
+        {
+         "deprecated": "false",
+         "name": "Call",
+         "description": "Option for Call",
+         "value": "17301558"
+        },
+        {
+         "deprecated": "false",
+         "name": "Camera",
+         "description": "Option for Camera",
+         "value": "17301559"
+        },
+        {
+         "deprecated": "false",
+         "name": "Charging",
+         "description": "Option for Charging",
+         "value": "17301534"
+        },
+        {
+         "deprecated": "false",
+         "name": "ClearNotifications",
+         "description": "Option for ClearNotifications",
+         "value": "17301594"
+        },
+        {
+         "deprecated": "false",
+         "name": "CloseClearCancel",
+         "description": "Option for CloseClearCancel",
+         "value": "17301560"
+        },
+        {
+         "deprecated": "false",
+         "name": "Compass",
+         "description": "Option for Compass",
+         "value": "17301561"
+        },
+        {
+         "deprecated": "false",
+         "name": "Crop",
+         "description": "Option for Crop",
+         "value": "17301562"
+        },
+        {
+         "deprecated": "false",
+         "name": "Day",
+         "description": "Option for Day",
+         "value": "17301563"
+        },
+        {
+         "deprecated": "false",
+         "name": "Delete",
+         "description": "Option for Delete",
+         "value": "17301533"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteInput",
+         "description": "Option for DeleteInput",
+         "value": "17301548"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteMenu",
+         "description": "Option for DeleteMenu",
+         "value": "17301564"
+        },
+        {
+         "deprecated": "false",
+         "name": "Dialer",
+         "description": "Option for Dialer",
+         "value": "17301544"
+        },
+        {
+         "deprecated": "false",
+         "name": "Directions",
+         "description": "Option for Directions",
+         "value": "17301565"
+        },
+        {
+         "deprecated": "false",
+         "name": "DiskFull",
+         "description": "Option for DiskFull",
+         "value": "17301597"
+        },
+        {
+         "deprecated": "false",
+         "name": "Edit",
+         "description": "Option for Edit",
+         "value": "17301566"
+        },
+        {
+         "deprecated": "false",
+         "name": "Email",
+         "description": "Option for Email",
+         "value": "17301545"
+        },
+        {
+         "deprecated": "false",
+         "name": "GetInput",
+         "description": "Option for GetInput",
+         "value": "17301549"
+        },
+        {
+         "deprecated": "false",
+         "name": "Help",
+         "description": "Option for Help",
+         "value": "17301568"
+        },
+        {
+         "deprecated": "false",
+         "name": "IdleLock",
+         "description": "Option for IdleLock",
+         "value": "17301535"
+        },
+        {
+         "deprecated": "false",
+         "name": "Info",
+         "description": "Option for Info",
+         "value": "17301659"
+        },
+        {
+         "deprecated": "false",
+         "name": "InfoDetails",
+         "description": "Option for InfoDetails",
+         "value": "17301569"
+        },
+        {
+         "deprecated": "false",
+         "name": "Lock",
+         "description": "Option for Lock",
+         "value": "17301551"
+        },
+        {
+         "deprecated": "false",
+         "name": "LowBattery",
+         "description": "Option for LowBattery",
+         "value": "17301536"
+        },
+        {
+         "deprecated": "false",
+         "name": "Manage",
+         "description": "Option for Manage",
+         "value": "17301570"
+        },
+        {
+         "deprecated": "false",
+         "name": "Map",
+         "description": "Option for Map",
+         "value": "17301546"
+        },
+        {
+         "deprecated": "false",
+         "name": "Month",
+         "description": "Option for Month",
+         "value": "17301572"
+        },
+        {
+         "deprecated": "false",
+         "name": "More",
+         "description": "Option for More",
+         "value": "17301573"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyCalendar",
+         "description": "Option for MyCalendar",
+         "value": "17301574"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyLocation",
+         "description": "Option for MyLocation",
+         "value": "17301575"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyPlaces",
+         "description": "Option for MyPlaces",
+         "value": "17301576"
+        },
+        {
+         "deprecated": "false",
+         "name": "Next",
+         "description": "Option for Next",
+         "value": "17301538"
+        },
+        {
+         "deprecated": "false",
+         "name": "OverlayNotifications",
+         "description": "Option for OverlayNotifications",
+         "value": "17301595"
+        },
+        {
+         "deprecated": "false",
+         "name": "PartialSecure",
+         "description": "Option for PartialSecure",
+         "value": "17301596"
+        },
+        {
+         "deprecated": "false",
+         "name": "Pause",
+         "description": "Option for Pause",
+         "value": "17301539"
+        },
+        {
+         "deprecated": "false",
+         "name": "Play",
+         "description": "Option for Play",
+         "value": "17301540"
+        },
+        {
+         "deprecated": "false",
+         "name": "PowerOff",
+         "description": "Option for PowerOff",
+         "value": "17301552"
+        },
+        {
+         "deprecated": "false",
+         "name": "Preferences",
+         "description": "Option for Preferences",
+         "value": "17301577"
+        },
+        {
+         "deprecated": "false",
+         "name": "Previous",
+         "description": "Option for Previous",
+         "value": "17301541"
+        },
+        {
+         "deprecated": "false",
+         "name": "RecentHistory",
+         "description": "Option for RecentHistory",
+         "value": "17301578"
+        },
+        {
+         "deprecated": "false",
+         "name": "Reminder",
+         "description": "Option for Reminder",
+         "value": "17301598"
+        },
+        {
+         "deprecated": "false",
+         "name": "ReportImage",
+         "description": "Option for ReportImage",
+         "value": "17301579"
+        },
+        {
+         "deprecated": "false",
+         "name": "Revert",
+         "description": "Option for Revert",
+         "value": "17301580"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rew",
+         "description": "Option for Rew",
+         "value": "17301542"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rotate",
+         "description": "Option for Rotate",
+         "value": "17301581"
+        },
+        {
+         "deprecated": "false",
+         "name": "Save",
+         "description": "Option for Save",
+         "value": "17301582"
+        },
+        {
+         "deprecated": "false",
+         "name": "Search",
+         "description": "Option for Search",
+         "value": "17301583"
+        },
+        {
+         "deprecated": "false",
+         "name": "SearchCategoryDefault",
+         "description": "Option for SearchCategoryDefault",
+         "value": "17301600"
+        },
+        {
+         "deprecated": "false",
+         "name": "Send",
+         "description": "Option for Send",
+         "value": "17301584"
+        },
+        {
+         "deprecated": "false",
+         "name": "SetAs",
+         "description": "Option for SetAs",
+         "value": "17301585"
+        },
+        {
+         "deprecated": "false",
+         "name": "Share",
+         "description": "Option for Share",
+         "value": "17301587"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentMode",
+         "description": "Option for SilentMode",
+         "value": "17301553"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentModeOff",
+         "description": "Option for SilentModeOff",
+         "value": "17301554"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortAlphabetically",
+         "description": "Option for SortAlphabetically",
+         "value": "17301660"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortBySize",
+         "description": "Option for SortBySize",
+         "value": "17301661"
+        },
+        {
+         "deprecated": "false",
+         "name": "SpeakNow",
+         "description": "Option for SpeakNow",
+         "value": "17301668"
+        },
+        {
+         "deprecated": "false",
+         "name": "Sync",
+         "description": "Option for Sync",
+         "value": "17301599"
+        },
+        {
+         "deprecated": "false",
+         "name": "Today",
+         "description": "Option for Today",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "Upload",
+         "description": "Option for Upload",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "UploadYouTube",
+         "description": "Option for UploadYouTube",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "View",
+         "description": "Option for View",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "Week",
+         "description": "Option for Week",
+         "value": "17301592"
+        },
+        {
+         "deprecated": "false",
+         "name": "Zoom",
+         "description": "Option for Zoom",
+         "value": "17301593"
+        }
+       ],
+       "className": "com.gordonlu.buttonicons.helpers.Icon",
+       "tag": "Icon",
+       "key": "Icon"
+      },
+      "type": "OPTION_LIST"
+     },
+     "name": "topIcon",
+     "type": "number"
+    },
+    {
+     "helper": {
+      "data": {
+       "defaultOpt": "Add",
+       "underlyingType": "java.lang.Integer",
+       "options": [
+        {
+         "deprecated": "false",
+         "name": "Add",
+         "description": "Option for Add",
+         "value": "17301547"
+        },
+        {
+         "deprecated": "false",
+         "name": "AddToMenu",
+         "description": "Option for AddToMenu",
+         "value": "17301555"
+        },
+        {
+         "deprecated": "false",
+         "name": "Agenda",
+         "description": "Option for Agenda",
+         "value": "17301556"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alarm",
+         "description": "Option for Alarm",
+         "value": "17301550"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alert",
+         "description": "Option for Alert",
+         "value": "17301543"
+        },
+        {
+         "deprecated": "false",
+         "name": "Call",
+         "description": "Option for Call",
+         "value": "17301558"
+        },
+        {
+         "deprecated": "false",
+         "name": "Camera",
+         "description": "Option for Camera",
+         "value": "17301559"
+        },
+        {
+         "deprecated": "false",
+         "name": "Charging",
+         "description": "Option for Charging",
+         "value": "17301534"
+        },
+        {
+         "deprecated": "false",
+         "name": "ClearNotifications",
+         "description": "Option for ClearNotifications",
+         "value": "17301594"
+        },
+        {
+         "deprecated": "false",
+         "name": "CloseClearCancel",
+         "description": "Option for CloseClearCancel",
+         "value": "17301560"
+        },
+        {
+         "deprecated": "false",
+         "name": "Compass",
+         "description": "Option for Compass",
+         "value": "17301561"
+        },
+        {
+         "deprecated": "false",
+         "name": "Crop",
+         "description": "Option for Crop",
+         "value": "17301562"
+        },
+        {
+         "deprecated": "false",
+         "name": "Day",
+         "description": "Option for Day",
+         "value": "17301563"
+        },
+        {
+         "deprecated": "false",
+         "name": "Delete",
+         "description": "Option for Delete",
+         "value": "17301533"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteInput",
+         "description": "Option for DeleteInput",
+         "value": "17301548"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteMenu",
+         "description": "Option for DeleteMenu",
+         "value": "17301564"
+        },
+        {
+         "deprecated": "false",
+         "name": "Dialer",
+         "description": "Option for Dialer",
+         "value": "17301544"
+        },
+        {
+         "deprecated": "false",
+         "name": "Directions",
+         "description": "Option for Directions",
+         "value": "17301565"
+        },
+        {
+         "deprecated": "false",
+         "name": "DiskFull",
+         "description": "Option for DiskFull",
+         "value": "17301597"
+        },
+        {
+         "deprecated": "false",
+         "name": "Edit",
+         "description": "Option for Edit",
+         "value": "17301566"
+        },
+        {
+         "deprecated": "false",
+         "name": "Email",
+         "description": "Option for Email",
+         "value": "17301545"
+        },
+        {
+         "deprecated": "false",
+         "name": "GetInput",
+         "description": "Option for GetInput",
+         "value": "17301549"
+        },
+        {
+         "deprecated": "false",
+         "name": "Help",
+         "description": "Option for Help",
+         "value": "17301568"
+        },
+        {
+         "deprecated": "false",
+         "name": "IdleLock",
+         "description": "Option for IdleLock",
+         "value": "17301535"
+        },
+        {
+         "deprecated": "false",
+         "name": "Info",
+         "description": "Option for Info",
+         "value": "17301659"
+        },
+        {
+         "deprecated": "false",
+         "name": "InfoDetails",
+         "description": "Option for InfoDetails",
+         "value": "17301569"
+        },
+        {
+         "deprecated": "false",
+         "name": "Lock",
+         "description": "Option for Lock",
+         "value": "17301551"
+        },
+        {
+         "deprecated": "false",
+         "name": "LowBattery",
+         "description": "Option for LowBattery",
+         "value": "17301536"
+        },
+        {
+         "deprecated": "false",
+         "name": "Manage",
+         "description": "Option for Manage",
+         "value": "17301570"
+        },
+        {
+         "deprecated": "false",
+         "name": "Map",
+         "description": "Option for Map",
+         "value": "17301546"
+        },
+        {
+         "deprecated": "false",
+         "name": "Month",
+         "description": "Option for Month",
+         "value": "17301572"
+        },
+        {
+         "deprecated": "false",
+         "name": "More",
+         "description": "Option for More",
+         "value": "17301573"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyCalendar",
+         "description": "Option for MyCalendar",
+         "value": "17301574"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyLocation",
+         "description": "Option for MyLocation",
+         "value": "17301575"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyPlaces",
+         "description": "Option for MyPlaces",
+         "value": "17301576"
+        },
+        {
+         "deprecated": "false",
+         "name": "Next",
+         "description": "Option for Next",
+         "value": "17301538"
+        },
+        {
+         "deprecated": "false",
+         "name": "OverlayNotifications",
+         "description": "Option for OverlayNotifications",
+         "value": "17301595"
+        },
+        {
+         "deprecated": "false",
+         "name": "PartialSecure",
+         "description": "Option for PartialSecure",
+         "value": "17301596"
+        },
+        {
+         "deprecated": "false",
+         "name": "Pause",
+         "description": "Option for Pause",
+         "value": "17301539"
+        },
+        {
+         "deprecated": "false",
+         "name": "Play",
+         "description": "Option for Play",
+         "value": "17301540"
+        },
+        {
+         "deprecated": "false",
+         "name": "PowerOff",
+         "description": "Option for PowerOff",
+         "value": "17301552"
+        },
+        {
+         "deprecated": "false",
+         "name": "Preferences",
+         "description": "Option for Preferences",
+         "value": "17301577"
+        },
+        {
+         "deprecated": "false",
+         "name": "Previous",
+         "description": "Option for Previous",
+         "value": "17301541"
+        },
+        {
+         "deprecated": "false",
+         "name": "RecentHistory",
+         "description": "Option for RecentHistory",
+         "value": "17301578"
+        },
+        {
+         "deprecated": "false",
+         "name": "Reminder",
+         "description": "Option for Reminder",
+         "value": "17301598"
+        },
+        {
+         "deprecated": "false",
+         "name": "ReportImage",
+         "description": "Option for ReportImage",
+         "value": "17301579"
+        },
+        {
+         "deprecated": "false",
+         "name": "Revert",
+         "description": "Option for Revert",
+         "value": "17301580"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rew",
+         "description": "Option for Rew",
+         "value": "17301542"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rotate",
+         "description": "Option for Rotate",
+         "value": "17301581"
+        },
+        {
+         "deprecated": "false",
+         "name": "Save",
+         "description": "Option for Save",
+         "value": "17301582"
+        },
+        {
+         "deprecated": "false",
+         "name": "Search",
+         "description": "Option for Search",
+         "value": "17301583"
+        },
+        {
+         "deprecated": "false",
+         "name": "SearchCategoryDefault",
+         "description": "Option for SearchCategoryDefault",
+         "value": "17301600"
+        },
+        {
+         "deprecated": "false",
+         "name": "Send",
+         "description": "Option for Send",
+         "value": "17301584"
+        },
+        {
+         "deprecated": "false",
+         "name": "SetAs",
+         "description": "Option for SetAs",
+         "value": "17301585"
+        },
+        {
+         "deprecated": "false",
+         "name": "Share",
+         "description": "Option for Share",
+         "value": "17301587"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentMode",
+         "description": "Option for SilentMode",
+         "value": "17301553"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentModeOff",
+         "description": "Option for SilentModeOff",
+         "value": "17301554"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortAlphabetically",
+         "description": "Option for SortAlphabetically",
+         "value": "17301660"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortBySize",
+         "description": "Option for SortBySize",
+         "value": "17301661"
+        },
+        {
+         "deprecated": "false",
+         "name": "SpeakNow",
+         "description": "Option for SpeakNow",
+         "value": "17301668"
+        },
+        {
+         "deprecated": "false",
+         "name": "Sync",
+         "description": "Option for Sync",
+         "value": "17301599"
+        },
+        {
+         "deprecated": "false",
+         "name": "Today",
+         "description": "Option for Today",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "Upload",
+         "description": "Option for Upload",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "UploadYouTube",
+         "description": "Option for UploadYouTube",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "View",
+         "description": "Option for View",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "Week",
+         "description": "Option for Week",
+         "value": "17301592"
+        },
+        {
+         "deprecated": "false",
+         "name": "Zoom",
+         "description": "Option for Zoom",
+         "value": "17301593"
+        }
+       ],
+       "className": "com.gordonlu.buttonicons.helpers.Icon",
+       "tag": "Icon",
+       "key": "Icon"
+      },
+      "type": "OPTION_LIST"
+     },
+     "name": "rightIcon",
+     "type": "number"
+    },
+    {
+     "helper": {
+      "data": {
+       "defaultOpt": "Add",
+       "underlyingType": "java.lang.Integer",
+       "options": [
+        {
+         "deprecated": "false",
+         "name": "Add",
+         "description": "Option for Add",
+         "value": "17301547"
+        },
+        {
+         "deprecated": "false",
+         "name": "AddToMenu",
+         "description": "Option for AddToMenu",
+         "value": "17301555"
+        },
+        {
+         "deprecated": "false",
+         "name": "Agenda",
+         "description": "Option for Agenda",
+         "value": "17301556"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alarm",
+         "description": "Option for Alarm",
+         "value": "17301550"
+        },
+        {
+         "deprecated": "false",
+         "name": "Alert",
+         "description": "Option for Alert",
+         "value": "17301543"
+        },
+        {
+         "deprecated": "false",
+         "name": "Call",
+         "description": "Option for Call",
+         "value": "17301558"
+        },
+        {
+         "deprecated": "false",
+         "name": "Camera",
+         "description": "Option for Camera",
+         "value": "17301559"
+        },
+        {
+         "deprecated": "false",
+         "name": "Charging",
+         "description": "Option for Charging",
+         "value": "17301534"
+        },
+        {
+         "deprecated": "false",
+         "name": "ClearNotifications",
+         "description": "Option for ClearNotifications",
+         "value": "17301594"
+        },
+        {
+         "deprecated": "false",
+         "name": "CloseClearCancel",
+         "description": "Option for CloseClearCancel",
+         "value": "17301560"
+        },
+        {
+         "deprecated": "false",
+         "name": "Compass",
+         "description": "Option for Compass",
+         "value": "17301561"
+        },
+        {
+         "deprecated": "false",
+         "name": "Crop",
+         "description": "Option for Crop",
+         "value": "17301562"
+        },
+        {
+         "deprecated": "false",
+         "name": "Day",
+         "description": "Option for Day",
+         "value": "17301563"
+        },
+        {
+         "deprecated": "false",
+         "name": "Delete",
+         "description": "Option for Delete",
+         "value": "17301533"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteInput",
+         "description": "Option for DeleteInput",
+         "value": "17301548"
+        },
+        {
+         "deprecated": "false",
+         "name": "DeleteMenu",
+         "description": "Option for DeleteMenu",
+         "value": "17301564"
+        },
+        {
+         "deprecated": "false",
+         "name": "Dialer",
+         "description": "Option for Dialer",
+         "value": "17301544"
+        },
+        {
+         "deprecated": "false",
+         "name": "Directions",
+         "description": "Option for Directions",
+         "value": "17301565"
+        },
+        {
+         "deprecated": "false",
+         "name": "DiskFull",
+         "description": "Option for DiskFull",
+         "value": "17301597"
+        },
+        {
+         "deprecated": "false",
+         "name": "Edit",
+         "description": "Option for Edit",
+         "value": "17301566"
+        },
+        {
+         "deprecated": "false",
+         "name": "Email",
+         "description": "Option for Email",
+         "value": "17301545"
+        },
+        {
+         "deprecated": "false",
+         "name": "GetInput",
+         "description": "Option for GetInput",
+         "value": "17301549"
+        },
+        {
+         "deprecated": "false",
+         "name": "Help",
+         "description": "Option for Help",
+         "value": "17301568"
+        },
+        {
+         "deprecated": "false",
+         "name": "IdleLock",
+         "description": "Option for IdleLock",
+         "value": "17301535"
+        },
+        {
+         "deprecated": "false",
+         "name": "Info",
+         "description": "Option for Info",
+         "value": "17301659"
+        },
+        {
+         "deprecated": "false",
+         "name": "InfoDetails",
+         "description": "Option for InfoDetails",
+         "value": "17301569"
+        },
+        {
+         "deprecated": "false",
+         "name": "Lock",
+         "description": "Option for Lock",
+         "value": "17301551"
+        },
+        {
+         "deprecated": "false",
+         "name": "LowBattery",
+         "description": "Option for LowBattery",
+         "value": "17301536"
+        },
+        {
+         "deprecated": "false",
+         "name": "Manage",
+         "description": "Option for Manage",
+         "value": "17301570"
+        },
+        {
+         "deprecated": "false",
+         "name": "Map",
+         "description": "Option for Map",
+         "value": "17301546"
+        },
+        {
+         "deprecated": "false",
+         "name": "Month",
+         "description": "Option for Month",
+         "value": "17301572"
+        },
+        {
+         "deprecated": "false",
+         "name": "More",
+         "description": "Option for More",
+         "value": "17301573"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyCalendar",
+         "description": "Option for MyCalendar",
+         "value": "17301574"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyLocation",
+         "description": "Option for MyLocation",
+         "value": "17301575"
+        },
+        {
+         "deprecated": "false",
+         "name": "MyPlaces",
+         "description": "Option for MyPlaces",
+         "value": "17301576"
+        },
+        {
+         "deprecated": "false",
+         "name": "Next",
+         "description": "Option for Next",
+         "value": "17301538"
+        },
+        {
+         "deprecated": "false",
+         "name": "OverlayNotifications",
+         "description": "Option for OverlayNotifications",
+         "value": "17301595"
+        },
+        {
+         "deprecated": "false",
+         "name": "PartialSecure",
+         "description": "Option for PartialSecure",
+         "value": "17301596"
+        },
+        {
+         "deprecated": "false",
+         "name": "Pause",
+         "description": "Option for Pause",
+         "value": "17301539"
+        },
+        {
+         "deprecated": "false",
+         "name": "Play",
+         "description": "Option for Play",
+         "value": "17301540"
+        },
+        {
+         "deprecated": "false",
+         "name": "PowerOff",
+         "description": "Option for PowerOff",
+         "value": "17301552"
+        },
+        {
+         "deprecated": "false",
+         "name": "Preferences",
+         "description": "Option for Preferences",
+         "value": "17301577"
+        },
+        {
+         "deprecated": "false",
+         "name": "Previous",
+         "description": "Option for Previous",
+         "value": "17301541"
+        },
+        {
+         "deprecated": "false",
+         "name": "RecentHistory",
+         "description": "Option for RecentHistory",
+         "value": "17301578"
+        },
+        {
+         "deprecated": "false",
+         "name": "Reminder",
+         "description": "Option for Reminder",
+         "value": "17301598"
+        },
+        {
+         "deprecated": "false",
+         "name": "ReportImage",
+         "description": "Option for ReportImage",
+         "value": "17301579"
+        },
+        {
+         "deprecated": "false",
+         "name": "Revert",
+         "description": "Option for Revert",
+         "value": "17301580"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rew",
+         "description": "Option for Rew",
+         "value": "17301542"
+        },
+        {
+         "deprecated": "false",
+         "name": "Rotate",
+         "description": "Option for Rotate",
+         "value": "17301581"
+        },
+        {
+         "deprecated": "false",
+         "name": "Save",
+         "description": "Option for Save",
+         "value": "17301582"
+        },
+        {
+         "deprecated": "false",
+         "name": "Search",
+         "description": "Option for Search",
+         "value": "17301583"
+        },
+        {
+         "deprecated": "false",
+         "name": "SearchCategoryDefault",
+         "description": "Option for SearchCategoryDefault",
+         "value": "17301600"
+        },
+        {
+         "deprecated": "false",
+         "name": "Send",
+         "description": "Option for Send",
+         "value": "17301584"
+        },
+        {
+         "deprecated": "false",
+         "name": "SetAs",
+         "description": "Option for SetAs",
+         "value": "17301585"
+        },
+        {
+         "deprecated": "false",
+         "name": "Share",
+         "description": "Option for Share",
+         "value": "17301587"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentMode",
+         "description": "Option for SilentMode",
+         "value": "17301553"
+        },
+        {
+         "deprecated": "false",
+         "name": "SilentModeOff",
+         "description": "Option for SilentModeOff",
+         "value": "17301554"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortAlphabetically",
+         "description": "Option for SortAlphabetically",
+         "value": "17301660"
+        },
+        {
+         "deprecated": "false",
+         "name": "SortBySize",
+         "description": "Option for SortBySize",
+         "value": "17301661"
+        },
+        {
+         "deprecated": "false",
+         "name": "SpeakNow",
+         "description": "Option for SpeakNow",
+         "value": "17301668"
+        },
+        {
+         "deprecated": "false",
+         "name": "Sync",
+         "description": "Option for Sync",
+         "value": "17301599"
+        },
+        {
+         "deprecated": "false",
+         "name": "Today",
+         "description": "Option for Today",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "Upload",
+         "description": "Option for Upload",
+         "value": "17301589"
+        },
+        {
+         "deprecated": "false",
+         "name": "UploadYouTube",
+         "description": "Option for UploadYouTube",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "View",
+         "description": "Option for View",
+         "value": "17301591"
+        },
+        {
+         "deprecated": "false",
+         "name": "Week",
+         "description": "Option for Week",
+         "value": "17301592"
+        },
+        {
+         "deprecated": "false",
+         "name": "Zoom",
+         "description": "Option for Zoom",
+         "value": "17301593"
+        }
+       ],
+       "className": "com.gordonlu.buttonicons.helpers.Icon",
+       "tag": "Icon",
+       "key": "Icon"
+      },
+      "type": "OPTION_LIST"
+     },
+     "name": "bottomIcon",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "SetCustomButtonIcons",
+   "description": "Sets the icon of the specified button. Use an empty text block if you do not want an icon to appear. Please use absolute paths in this instance.",
+   "params": [
+    {
+     "name": "component",
+     "type": "component"
+    },
+    {
+     "name": "leftIconPath",
+     "type": "text"
+    },
+    {
+     "name": "topIconPath",
+     "type": "text"
+    },
+    {
+     "name": "rightIconPath",
+     "type": "text"
+    },
+    {
+     "name": "bottomIconPath",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "true",
+   "name": "SetFontAwesomeButtonIcons",
+   "description": "Sets the Font Awesome icon of the specified button. Use an empty text block if you do not want an icon to appear. The size of the icons should be in pixels.",
+   "params": [
+    {
+     "name": "component",
+     "type": "component"
+    },
+    {
+     "name": "leftIcon",
+     "type": "text"
+    },
+    {
+     "name": "topIcon",
+     "type": "text"
+    },
+    {
+     "name": "rightIcon",
+     "type": "text"
+    },
+    {
+     "name": "bottomIcon",
+     "type": "text"
+    },
+    {
+     "name": "color",
+     "type": "number"
+    },
+    {
+     "name": "size",
+     "type": "number"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "SetMaterialButtonIcons",
+   "description": "Sets the material icon of the specified button. Use an empty text block if you do not want an icon to appear. The size of the icons should be in pixels.",
+   "params": [
+    {
+     "name": "component",
+     "type": "component"
+    },
+    {
+     "name": "leftIcon",
+     "type": "text"
+    },
+    {
+     "name": "topIcon",
+     "type": "text"
+    },
+    {
+     "name": "rightIcon",
+     "type": "text"
+    },
+    {
+     "name": "bottomIcon",
+     "type": "text"
+    },
+    {
+     "name": "color",
+     "type": "number"
+    },
+    {
+     "name": "size",
+     "type": "number"
+    }
+   ]
+  }
+ ],
+ "blockProperties": [],
+ "helpUrl": "",
+ "licenseName": "",
+ "type": "com.gordonlu.buttonicons.ButtonIcons",
+ "androidMinSdk": 7,
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "assets": [
+  "font-awesome.ttf",
+  "material-icons.ttf"
+ ],
+ "name": "ButtonIcons",
+ "helpString": "A non-visible extension that provides extra features for the AppInventor Button component. Created by Gordon.",
+ "properties": [],
+ "events": []
+}

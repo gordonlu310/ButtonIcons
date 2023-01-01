@@ -23,7 +23,6 @@ import android.graphics.Paint.Align;
 import android.graphics.Canvas;
 import com.google.appinventor.components.runtime.Form;
 
-import java.io.File;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.Typeface;
@@ -32,8 +31,11 @@ import android.graphics.BitmapFactory;
 import com.google.appinventor.components.annotations.UsesAssets;
 import android.graphics.BitmapFactory.*;
 import android.util.DisplayMetrics;
+import java.io.*;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 
-@DesignerComponent(version = 1, category = ComponentCategory.EXTENSION, description = "A non-visible extension that provides extra features for the AppInventor" + 
+@DesignerComponent(version = 2, category = ComponentCategory.EXTENSION, description = "A non-visible extension that provides extra features for the AppInventor" + 
 " Button component. Created by Gordon.", nonVisible = true, iconName = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABq0lEQVR42p2R2U7CQBSGeWnfQB/BKO6CAi" + 
 "5AWbUFyiIICopLQmRfChQiiSZGb3/PmdIWY/SCJl/mzPJ/M51xOOhTFAXL4DDDcmWMWu8dtf5vKo0ZpMIAwXxfELhievCpHfj9fgjBc/cN2usnhn+QuBsjdK0hRCKWnWS6cCktW1Cuz4zFM4OR4EvUbf0DHtpt96IJZ6wBZ7SOzUgdG" + 
 "+EXWxAtaVCrOrJPU+SY56nYNZAfwJVoY/eyRYIWdkiyHW9iS4gatiB+O8JFmRnjkggWNBxS8DDREe2BYrAvt7Ent4SQZZaAQ3yRMu0avRnCneriaAHuu5MduJK2cF9euAOFgol7nVod3kwPnrSBN23Xx4w6FwrRwiskqxOkHiaQrofwZ" + 
@@ -48,19 +50,22 @@ public class ButtonIcons extends AndroidNonvisibleComponent {
     }
 
     @SimpleFunction(description = "Sets the icon of the specified button. Use 0 if you do not want an icon to appear.")
-    public void SetButtonIcons(AndroidViewComponent component, @Options(Icon.class) int leftIcon, @Options(Icon.class) int topIcon, @Options(Icon.class) int rightIcon, 
+    public void SetAndroidButtonIcons(AndroidViewComponent component, @Options(Icon.class) int leftIcon, @Options(Icon.class) int topIcon, @Options(Icon.class) int rightIcon, 
     @Options(Icon.class) int bottomIcon) {
         Button button = (Button) component.getView();
         button.setCompoundDrawablesWithIntrinsicBounds(leftIcon, topIcon, rightIcon, bottomIcon);
     }
 
-    @SimpleFunction(description = "Sets the icon of the specified button. Use an empty text block if you do not want an icon to appear. Please use absolute paths in this instance.")
+    @SimpleFunction(description = "Sets the icon of the specified button. Use an empty text block if you do not want an icon to appear. Please use absolute paths or full paths in this instance.")
     public void SetCustomButtonIcons(AndroidViewComponent component, String leftIconPath, String topIconPath, String rightIconPath, String bottomIconPath) {
         Button button = (Button) component.getView();
         button.setCompoundDrawablesWithIntrinsicBounds(createDrawable(leftIconPath), createDrawable(topIconPath), createDrawable(rightIconPath), createDrawable(bottomIconPath));
     }
 
     public Drawable createDrawable(String path) {
+        if(path.startsWith("file://")) {
+			path = path.replace("file://", "");
+		}
         if (path == "") {
             return null;
         } else {
@@ -75,16 +80,21 @@ public class ButtonIcons extends AndroidNonvisibleComponent {
         if (icon == "") {
             return null; 
         } else {
-            Typeface typeface = Typeface.createFromAsset(form.getAssets(), "com.gordonlu.buttonicons/" + "material-icons.ttf");
-            Paint paint = new Paint();
-            paint.setTypeface(typeface);
-            paint.setColor(color);
-            paint.setTextSize((float)size);
-            paint.setTextAlign(Paint.Align.CENTER);
-            Bitmap bit = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(bit);
-            canvas.drawText(icon, (float) (canvas.getWidth() / 2),   (((float) (canvas.getHeight() / 2)) - ((paint.descent() + paint.ascent()) / 2)), paint);
-            return new BitmapDrawable(form.getResources(), bit);    
+            try {
+                String newFilePath = GetFont();
+                Typeface typeface = Typeface.createFromFile(newFilePath);
+                Paint paint = new Paint();
+                paint.setTypeface(typeface);
+                paint.setColor(color);
+                paint.setTextSize((float)size);
+                paint.setTextAlign(Paint.Align.CENTER);
+                Bitmap bit = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+                Canvas canvas = new Canvas(bit);
+                canvas.drawText(icon, (float) (canvas.getWidth() / 2),   (((float) (canvas.getHeight() / 2)) - ((paint.descent() + paint.ascent()) / 2)), paint);
+                return new BitmapDrawable(form.getResources(), bit);    
+            } catch (IOException e) {
+                return null;
+            }
         }
     }
 
@@ -105,5 +115,62 @@ public class ButtonIcons extends AndroidNonvisibleComponent {
     public int getDensity(){
         DisplayMetrics metrics = form.getResources().getDisplayMetrics();
         return (int) metrics.density;
+    }
+
+    @SimpleEvent(description = "This event is fired when an error has occurred.")
+    public void Error(String error) {
+        EventDispatcher.dispatchEvent(this, "ErrorOccurred", error);
+    }
+
+    // Credit: TIMAI2, https://community.appinventor.mit.edu/t/f-os-button-icon-extension-android-material-and-custom-icons/73439/14?u=gordon_lu
+
+    public String GetFont() throws IOException {
+        String filePath = "";
+        File file = File.createTempFile("temp", ".ttf");
+        filePath = file.getAbsolutePath();
+        try {
+          InputStream in = form.openAssetForExtension(this, "material-icons.ttf");
+          int size = in.available();
+          byte[] buffer = new byte[size];
+          in.read(buffer);
+          in.close();
+          FileOutputStream out = new FileOutputStream(filePath);
+          out.write(buffer);
+          out.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+          Error(e.getMessage());
+        }
+        return filePath;
+      }
+
+    // This block is added in V2.
+
+    @SimpleFunction(description = "Sets the button's icons from the given icon font. Please use absolute or full paths in this instance.")
+    public void SetFontButtonIcons(AndroidViewComponent component, String fontPath, String leftIcon, String topIcon, String rightIcon, String bottomIcon, int color, int size) {
+        Button button = (Button) component.getView();
+        int pixels = size * getDensity();
+        if (fontPath.startsWith("file://")) {
+            fontPath = fontPath.replace("file://", "");
+        }
+        button.setCompoundDrawablesWithIntrinsicBounds(createIcon(leftIcon, color, pixels, fontPath), createIcon(topIcon, color, pixels, fontPath), 
+        createIcon(rightIcon, color, pixels, fontPath), createIcon(bottomIcon, color, pixels, fontPath));
+    }
+
+    public Drawable createIcon(String icon, int color, int size, String fontPath) {
+        if (icon == "") {
+            return null; 
+        } else {
+            Typeface typeface = Typeface.createFromFile(fontPath);
+            Paint paint = new Paint();
+            paint.setTypeface(typeface);
+            paint.setColor(color);
+            paint.setTextSize((float)size);
+            paint.setTextAlign(Paint.Align.CENTER);
+            Bitmap bit = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(bit);
+            canvas.drawText(icon, (float) (canvas.getWidth() / 2),   (((float) (canvas.getHeight() / 2)) - ((paint.descent() + paint.ascent()) / 2)), paint);
+            return new BitmapDrawable(form.getResources(), bit);    
+        }
     }
 }
